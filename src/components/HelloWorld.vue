@@ -7,6 +7,7 @@
 </template>
 
 <script>
+
 // @ is an alias to /src
 import AppButton from './atoms/AppButton'
 import Input from './atoms/AppInput'
