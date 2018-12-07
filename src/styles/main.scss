@@ -6,3 +6,15 @@
 @import "./partials/_fonts";      // Decalaring fonts per MWF guidelines
 @import "./partials/_variables";  // Declare global variables here
 @import "./partials/_typography"; // Declaring all typography
+
+
+// Header 
+
+.navbar-container{
+    &__content{
+        ul li{
+            @include inline-flex;
+        }
+        
+    }
+}
