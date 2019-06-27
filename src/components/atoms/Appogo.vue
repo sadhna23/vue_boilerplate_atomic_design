@@ -6,16 +6,15 @@
 
 <script>
 export default {
-  name: 'AppLogo',
-  data () {
-    return {}
+  name: "AppLogo",
+  data() {
+    return {};
   },
   props: {
     src: String
   }
-}
+};
 </script>
 
 <style scoped>
-
 </style>
