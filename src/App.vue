@@ -1,6 +1,22 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="container">
+      <div class="row">
+        <div class="col-2 main__Route">
+          <ul>
+            <li class="route__Layout">
+              <router-link to="/layout">Layout</router-link>
+            </li>
+            <li class="route__Header">
+              <router-link to="/header">Header</router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="col-10 main__Container">
+          <router-view/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
