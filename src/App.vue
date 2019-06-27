@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-2 main__Route">
           <ul>
-            <li class="route__Layout">
+            <li class="route__navigation">
               <router-link to="/layout">Layout</router-link>
             </li>
-            <li class="route__Header">
+            <li class="route route__navigation">
               <router-link to="/header">Header</router-link>
             </li>
           </ul>
