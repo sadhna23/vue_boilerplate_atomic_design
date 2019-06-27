@@ -7,15 +7,14 @@
 </template>
 
 <script>
-
 // @ is an alias to /src
-import AppButton from './atoms/AppButton'
-import Input from './atoms/AppInput'
+import AppButton from "./atoms/AppButton";
+import Input from "./atoms/AppInput";
 
 export default {
   name: "HelloWorld",
 
-  components:{
+  components: {
     AppButton,
     Input
   }
