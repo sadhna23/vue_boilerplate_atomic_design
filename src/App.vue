@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <div class="container">
+    <div class="container no-padding">
       <div class="row">
         <div class="col-2 main__Route">
-          <ul>
+          <ul class="no-padding">
             <li class="route__navigation">
               <router-link to="/layout">Layout</router-link>
             </li>
             <li class="route route__navigation">
               <router-link to="/header">Header</router-link>
+            </li>
+            <li class="route route__navigation">
+              <router-link to="/sticky">Sticky Header</router-link>
             </li>
           </ul>
         </div>

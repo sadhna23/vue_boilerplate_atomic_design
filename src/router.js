@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Layout from "./views/Layout.vue";
 import Header from "./views/Header.vue";
+import StickyHeader from "./components/organisms/StickyHeader";
 
 Vue.use(Router);
 
@@ -33,6 +34,11 @@ export default new Router({
       path: "/header",
       name: "header",
       component: Header
+    },
+    {
+      path: "/sticky",
+      name: "sticky",
+      component: StickyHeader
     }
   ]
 });
