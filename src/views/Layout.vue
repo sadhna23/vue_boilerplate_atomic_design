@@ -1,13 +1,15 @@
 <template>
   <div class="about">
-    <h1>This is Layout page</h1>
-    <NavBar/>
+    <ImageAtLeft/>
   </div>
 </template>
 
 
 <script>
+import ImageAtLeft from "@/components/organisms/ImageAtLeft.vue";
 export default {
-  components: {}
+  components: {
+    ImageAtLeft
+  }
 };
 </script>
