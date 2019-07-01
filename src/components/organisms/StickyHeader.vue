@@ -4,35 +4,39 @@
       <div class="row">
         <div class="col-12">
           <p>Sticky Header</p>
-          <div class="row">
-            <ul class="stickyheader__items col-sm-12">
-              <li class="items__item">Financial Services</li>
-              <li class="items__item">HealthCare</li>
-              <li class="items__item">Services</li>
-            </ul>
-          </div>
+          <StickyTop top="20" :scroll-y="scrollY" :titles="titles"></StickyTop>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import StickyTop from "../molecules/StickyTop";
 export default {
-  name: "StickyHeader"
+  name: "StickyHeader",
+  components: {
+    StickyTop
+  },
+  data() {
+    return {
+      scrollY: null,
+      titles: ["Financial Services", "HealthCare", "Services"]
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      this.scrollY = Math.round(window.scrollY);
+    });
+  }
 };
 </script>
 <style lang="scss" scoped>
 @import "../../styles/main";
-
 .container__StickyHeader {
-  .stickyheader__items {
-    @include flexbox;
-    @include flex-direction(column);
-    @include media-breakpoint-up(lg) {
-      @include flex-direction(row);
-    }
-    .items__item {
-    }
-  }
+  height: 600px;
 }
 </style>

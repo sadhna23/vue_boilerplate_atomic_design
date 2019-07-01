@@ -38,7 +38,10 @@ export default new Router({
     {
       path: "/sticky",
       name: "sticky",
-      component: StickyHeader
+      component: StickyHeader,
+      props: {
+        titles: ["Financial Services", "HealthCare", "Services"]
+      }
     }
   ]
 });
