@@ -21,5 +21,10 @@
 </template>
 
 <style lang="scss">
+// _variables.scss, _mixins.scss & _grid.scss are loaded in globally using vue.config.js
+// For more info visit https://vueschool.io/articles/vuejs-tutorials/globally-load-sass-into-your-vue-js-applications/
+@import "./styles/partials/_reset"; // Normalize
+@import "./styles/partials/_fonts"; // Decalaring fonts per MWF guidelines
+@import "./styles/partials/_typography"; // Declaring all typography
 @import "./styles/main";
 </style>
