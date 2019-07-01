@@ -1,12 +1,12 @@
 <template>
   <section>
-    <div class="container content-container">
+    <div class="content-container">
       <div class="row">
         <div class="col-xl-6 col-lg-12" data-aos="fade-right">
-          <AppParagraph :content="content"></AppParagraph>
+          <AppParagraph :content="contentLeft"></AppParagraph>
         </div>
         <div class="col-xl-6 col-lg-12" data-aos="fade-left">
-          <AppParagraph :content="content"></AppParagraph>
+          <AppParagraph :content="contentRight"></AppParagraph>
         </div>
       </div>
     </div>
@@ -21,7 +21,8 @@ export default {
     AppParagraph
   },
   props: {
-    content: String
+    contentLeft: String,
+    contentRight: String
   }
 };
 </script>
@@ -30,6 +31,8 @@ export default {
   p {
     padding-top: 15px;
     padding-bottom: 15px;
+    color: $text--default;
+    line-height: 24px;
   }
 }
 </style>
