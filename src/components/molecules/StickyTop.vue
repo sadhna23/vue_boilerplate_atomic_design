@@ -36,7 +36,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../../styles/main";
 .stickyheader__items {
   position: relative;
   @include flexbox;
@@ -47,13 +46,16 @@ export default {
     width: 100%;
   }
   .items__item {
-    border: 1px solid #dcdcdc;
+    border: 1px solid $bg-shgrey;
     padding: 20px;
-    background: #d0d0d0;
+    background: $bg-shgreylight;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      @include flex(1);
+    }
   }
   .spacer {
     height: 80px;
   }
 }
 </style>
-

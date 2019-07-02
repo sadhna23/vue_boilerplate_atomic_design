@@ -1,9 +1,11 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import Layout from "./views/Layout.vue";
-import Header from "./views/Header.vue";
 import StickyHeader from "./components/organisms/StickyHeader";
+import Home from "./views/Home.vue";
+// import Layout from "./views/Layout.vue";
+// import Header from "./views/Header.vue";
+import HTMLCode from "@/components/molecules/HTMLCode.vue";
+import CSSCode from "@/components/molecules/CSSCode.vue";
 
 Vue.use(Router);
 
@@ -19,21 +21,22 @@ export default new Router({
     {
       path: "/about",
       name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+      component: () => import("./views/About.vue")
     },
     {
       path: "/layout",
       name: "Layout",
-      component: Layout
-    },
-    {
-      path: "/header",
-      name: "header",
-      component: Header
+      component: () => import("./views/Layout.vue"),
+      children: [
+        {
+          path: "/html",
+          component: HTMLCode
+        },
+        {
+          path: "/css",
+          component: CSSCode
+        }
+      ]
     },
     {
       path: "/sticky",
@@ -42,6 +45,11 @@ export default new Router({
       props: {
         titles: ["Financial Services", "HealthCare", "Services"]
       }
+    },
+    {
+      path: "/header",
+      name: "header",
+      component: () => import("./views/Header.vue")
     }
   ]
 });

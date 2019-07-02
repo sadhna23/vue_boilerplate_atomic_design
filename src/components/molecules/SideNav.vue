@@ -1,5 +1,5 @@
 <template>
-  <ul class="no-padding">
+  <ul>
     <li class="route__navigation">
       <router-link to="/layout">Layout</router-link>
     </li>

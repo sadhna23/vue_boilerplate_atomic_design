@@ -37,6 +37,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../styles/main";
 .container__StickyHeader {
-  height: 600px;
+  height: 900px;
 }
 </style>
