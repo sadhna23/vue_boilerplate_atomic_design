@@ -1,5 +1,5 @@
 <template>
-  <div class="container__StickyHeader">
+  <div class="container__stickyheader">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -36,7 +36,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "../../styles/main";
-.container__StickyHeader {
+.container__stickyheader {
   height: 900px;
 }
 </style>
