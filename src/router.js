@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
+import StickyHeader from "./components/organisms/StickyHeader";
 import Home from "./views/Home.vue";
 // import Layout from "./views/Layout.vue";
 // import Header from "./views/Header.vue";
@@ -36,6 +37,14 @@ export default new Router({
           component: CSSCode
         }
       ]
+    },
+    {
+      path: "/sticky",
+      name: "sticky",
+      component: StickyHeader,
+      props: {
+        titles: ["Financial Services", "HealthCare", "Services"]
+      }
     },
     {
       path: "/header",
