@@ -1,15 +1,12 @@
 <template>
   <div>
-    <ul class="code">
-      <li>
-        <router-link :to="{name:`${compName}.Html`}">View Html</router-link>
-      </li>
-      <li>
-        <router-link :to="{name:`${compName}.Css`}">View Css</router-link>
-      </li>
-      <li>
-        <router-link to="/javascript">View JS</router-link>
-      </li>
+    <ul class="child-routes">
+        <router-link active-class="active" tag="li" :to="{name:`${data.compName}.Html`}">View Html</router-link>
+     
+        <router-link active-class="active" tag="li" :to="{name:`${data.compName}.Css`}">View Css</router-link>
+      
+        <router-link v-if="data.isJsAvailable" active-class="active" tag="li" to="/javascript">View JS</router-link>
+      
     </ul>
     <router-view></router-view>
   </div>
@@ -22,12 +19,12 @@ export default {
   },
   data() {
     return {
-      compName: ""
+      data: {}
     };
   },
   created() {
     this.bus.$on("compName", data => {
-      this.compName = data;
+      this.data = data;
     });
   },
   mounted() {}
@@ -35,9 +32,24 @@ export default {
 </script>
 <style lang="scss">
 @import "@/styles/main.scss";
-.code {
+.child-routes {
   @include flexbox;
-  @include justify-content(space-around);
-  background-color: lightgray;
+  @include justify-content(flex-start);
+  background-color: #555; 
+  padding : 0;
+  li{
+    padding:10px 25px;
+    text-decoration:none;
+    color: $text--white;
+    cursor: pointer;
+    &:hover{
+      background-color: $bg--black;
+      color: $text--white !important;
+    }
+  }
 }
+.active{
+      background-color: #4CAF50;
+      color : $bg--black !important;
+    }
 </style>

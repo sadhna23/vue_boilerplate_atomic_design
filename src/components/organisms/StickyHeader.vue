@@ -37,7 +37,11 @@ export default {
     window.addEventListener("scroll", () => {
       this.scrollY = Math.round(window.scrollY);
     });
-    this.bus.$emit("compName", this.$props.compName);
+    let data = {
+      compName : this.$props.compName,
+      isJsAvailable : false
+    }
+    this.bus.$emit("compName", data);
   }
 };
 </script>

@@ -18,7 +18,11 @@ export default {
     compName: String
   },
   mounted() {
-    this.bus.$emit("compName", this.$props.compName);
+    let data = {
+      compName : this.$props.compName,
+      isJsAvailable : false
+    }
+    this.bus.$emit("compName", data);
   }
 };
 </script>
