@@ -6,6 +6,8 @@ import Home from "./views/Home.vue";
 // import Header from "./views/Header.vue";
 import HTMLCode from "@/components/molecules/HTMLCode.vue";
 import CSSCode from "@/components/molecules/CSSCode.vue";
+import HtmlCodeSticky from "@/components/molecules/HtmlCodeSticky.vue";
+import CssCodeSticky from "@/components/molecules/CssCodeSticky.vue";
 
 Vue.use(Router);
 
@@ -15,7 +17,7 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "/home",
       component: Home
     },
     {
@@ -26,25 +28,40 @@ export default new Router({
     {
       path: "/layout",
       name: "Layout",
+      props: { compName: "Layout" },
       component: () => import("./views/Layout.vue"),
       children: [
         {
-          path: "/html",
+          name: "Layout.Html",
+          path: "html",
           component: HTMLCode
         },
         {
-          path: "/css",
+          name: "Layout.Css",
+          path: "css",
           component: CSSCode
         }
       ]
     },
     {
       path: "/sticky",
-      name: "sticky",
+      name: "Sticky",
       component: StickyHeader,
       props: {
-        titles: ["Financial Services", "HealthCare", "Services"]
-      }
+        compName: "Sticky"
+      },
+      children: [
+        {
+          name: "Sticky.Html",
+          path: "html",
+          component: HtmlCodeSticky
+        },
+        {
+          name: "Sticky.Css",
+          path: "css",
+          component: CssCodeSticky
+        }
+      ]
     },
     {
       path: "/header",
