@@ -42,7 +42,7 @@ export default {
   @include flex-direction(column);
   @include media-breakpoint-up(lg) {
     @include flex-direction(row);
-    align-items: stretch;
+    @include align-items(stretch);
     width: 100%;
   }
   .items__item {

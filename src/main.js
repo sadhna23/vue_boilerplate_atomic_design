@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 Vue.config.productionTip = false;
-
+Vue.prototype.bus = new Vue();
 new Vue({
   router,
   store,

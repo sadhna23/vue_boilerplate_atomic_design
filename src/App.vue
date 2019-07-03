@@ -6,18 +6,22 @@
           <SideNav />
         </div>
         <div class="col-10 main__container">
-          <router-view />
+          <router-view>
+            <childRouting  />
+          </router-view>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import childRouting from "@/components/molecules/childRouting.vue";
 import SideNav from "./components/molecules/SideNav";
 export default {
   name: "App",
   components: {
-    SideNav
+    SideNav,
+    childRouting
   }
 };
 </script>

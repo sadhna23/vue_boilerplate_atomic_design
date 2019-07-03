@@ -10,6 +10,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
         </div>
+        <div class="col-12">
+          <slot></slot>
+        </div>
       </div>
     </div>
   </div>
@@ -21,6 +24,9 @@ export default {
   components: {
     StickyTop
   },
+  props: {
+    compName: String
+  },
   data() {
     return {
       scrollY: null,
@@ -31,6 +37,7 @@ export default {
     window.addEventListener("scroll", () => {
       this.scrollY = Math.round(window.scrollY);
     });
+    this.bus.$emit("compName", this.$props.compName);
   }
 };
 </script>
