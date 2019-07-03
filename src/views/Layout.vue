@@ -7,7 +7,6 @@
   </div>
 </template>
 
-
 <script>
 import ImageAtLeft from "@/components/organisms/ImageAtLeft.vue";
 export default {
@@ -18,7 +17,11 @@ export default {
     compName: String
   },
   mounted() {
-    this.bus.$emit("compName", this.$props.compName);
+    let data = {
+      compName: this.$props.compName,
+      isJsAvailable: false
+    };
+    this.bus.$emit("compName", data);
   }
 };
 </script>
