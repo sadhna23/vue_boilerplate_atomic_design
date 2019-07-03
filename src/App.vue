@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <div class="container no-padding">
+    <div class="container">
       <div class="row">
-        <div class="col-2 main__route">
+        <div class="col-2">
           <SideNav />
         </div>
-        <div class="col-10 main__container">
+        <div class="col-10">
           <router-view>
             <childRouting  />
           </router-view>
