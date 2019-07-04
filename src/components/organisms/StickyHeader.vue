@@ -1,10 +1,10 @@
 <template>
-  <section class="container__stickyheader">
+  <section class="section__stickyheader">
     <div class="container">
       <div class="row">
-        <div class="col-12 container__stickyheader-wrapper">
+        <div class="col-12 section__stickyheader-wrapper">
           <StickyTop :titles="titles"></StickyTop>
-          <div class="container__stickheader-para">
+          <div class="section__stickheader-para">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
@@ -18,7 +18,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
           </div>
-          <div class="container__stickyheader-codeview col-12">
+          <div class="section__stickyheader-codeview col-12">
             <slot></slot>
           </div>
         </div>
@@ -54,10 +54,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.container__stickyheader-wrapper {
+.section__stickyheader-wrapper {
   padding: 0;
 }
-.container__stickheader-para {
+.section__stickheader-para {
   padding: 20px 30px;
 }
 </style>

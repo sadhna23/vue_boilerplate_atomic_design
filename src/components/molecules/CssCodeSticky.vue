@@ -1,6 +1,5 @@
 <template>
   <div>
-    css code
     <pre> 
     html {
      scroll-behavior: smooth;
