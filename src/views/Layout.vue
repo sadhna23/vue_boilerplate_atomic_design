@@ -1,9 +1,8 @@
 <template>
   <div class="about">
-    <ImageAtLeft />
-    <div class="col-12">
+    <ImageAtLeft>
       <slot></slot>
-    </div>
+    </ImageAtLeft>
   </div>
 </template>
 
