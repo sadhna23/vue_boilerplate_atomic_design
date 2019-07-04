@@ -1,33 +1,36 @@
 <template>
-  <div>css code
-  <pre> 
+  <div>
+    css code
+    <pre> 
     .section {
-      &--image-left {
+      &--image-right {
         max-height: 100%;
+        position: relative;
       }
     }
 
     .card {
-      &--left {
+      &--right {
         background-image: url("../../assets/governance_hero.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 50% 50%;
-        position:  absolute;
-        right:0;
-        min-height:50%;
+        background-position: center;
+        position: absolute;
+        right: 0;
+        height: 100%;
         width: 100%;
-        @include media-breakpoint-down(lg){
-          display:none;
+
+        @include media-breakpoint-down(lg) {
+          display: none;
         }
       }
-      &--right {
+
+      &--left {
         padding-top: 100px;
         padding-bottom: 100px;
       }
     }
 </pre>
-
   </div>
 </template>
 
