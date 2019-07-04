@@ -1,7 +1,7 @@
 <template>
-  <div class="stickyheader" id="sticky_header">
-    <ul class="stickyheader__wrapper col-sm-12" :style="myStyle">
-      <li class="stickyheader__title" v-for="(title, index) in titles" :key="index">{{title}}</li>
+  <div class="stickytop" id="sticky_header">
+    <ul class="stickytop__titlewrapper col-sm-12" :style="myStyle">
+      <li class="stickytop__title" v-for="(title, index) in titles" :key="index">{{title}}</li>
     </ul>
   </div>
 </template>
@@ -56,7 +56,7 @@ export default {
 html {
   scroll-behavior: smooth;
 }
-.stickyheader__wrapper {
+.stickytop__titlewrapper {
   margin: 10px 0;
   padding: 0;
   position: relative;
@@ -68,7 +68,7 @@ html {
     @include align-items(stretch);
     width: 100%;
   }
-  .stickyheader__title {
+  .stickytop__title {
     border: 1px solid $bg-shgrey;
     padding: 20px;
     background: $bg-shgreylight;
@@ -79,7 +79,7 @@ html {
   }
 }
 
-.stickyheader {
+.stickytop {
   position: sticky;
   top: 0;
   z-index: 1;

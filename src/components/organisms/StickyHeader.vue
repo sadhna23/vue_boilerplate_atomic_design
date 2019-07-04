@@ -1,10 +1,10 @@
 <template>
-  <section class="section__stickyheader">
+  <section class="stickyheader">
     <div class="container">
       <div class="row">
-        <div class="col-12 section__stickyheader-wrapper">
+        <div class="col-12 stickyheader__wrapper">
           <StickyTop :titles="titles"></StickyTop>
-          <div class="section__stickheader-para">
+          <div class="stickheader__para">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
@@ -18,7 +18,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi veritatis voluptatibus consequuntur quaerat sed laborum suscipit nulla, doloribus repellat illum ducimus rem laudantium magni, iusto natus nostrum ad officiis!</p>
           </div>
-          <div class="section__stickyheader-codeview col-12">
+          <div class="stickyheader__codeview col-12">
             <slot></slot>
           </div>
         </div>
@@ -54,10 +54,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.section__stickyheader-wrapper {
+.stickyheader__wrapper {
   padding: 0;
 }
-.section__stickheader-para {
+.stickheader__para {
   padding: 20px 30px;
 }
 </style>
