@@ -15,7 +15,7 @@
         background-position: 50% 50%;
         position:  absolute;
         right:0;
-        min-height:500px;
+        min-height:50%;
         width: 100%;
         @include media-breakpoint-down(lg){
           display:none;

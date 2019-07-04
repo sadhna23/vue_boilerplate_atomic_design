@@ -48,7 +48,7 @@ export default {
     background-position: 50% 50%;
     position: absolute;
     right: 0;
-    height: 500px;
+    height: 50%;
     width: 100%;
     @include media-breakpoint-down(lg) {
       display: none;
