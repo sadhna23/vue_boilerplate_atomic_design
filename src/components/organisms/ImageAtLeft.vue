@@ -24,6 +24,15 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="container width-limit">
+        <div class="row">
+          <div class="col-12">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -34,8 +43,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/main.scss";
-
 .section {
   &--image-right {
     max-height: 100%;

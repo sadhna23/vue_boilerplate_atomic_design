@@ -1,7 +1,7 @@
 <template>
   <div>
     css code
-    <pre> 
+    <pre>
     .section {
       &--image-right {
         max-height: 100%;
