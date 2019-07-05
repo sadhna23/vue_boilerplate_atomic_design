@@ -1,9 +1,9 @@
 <template>
   <div>
-    <section class="section section--image-right">
-      <div class="container width-limit">
+    <section class="image-right">
+      <div class="container image-right__width-limit">
         <div class="row">
-          <div class="col-xl-6 col-xs-12 card card--left">
+          <div class="col-xl-6 col-xs-12 image-right__card image-right__card--left">
             <h1>This is header</h1>
             <p>
               The Microsoft 365 E-Discovery and Data Subject Requests capability
@@ -20,7 +20,7 @@
               folders.
             </p>
           </div>
-          <div class="col-xl-6 col-xs-12 card card--right"></div>
+          <div class="col-xl-6 col-xs-12 image-right__card image-right__card--right"></div>
         </div>
       </div>
     </section>
@@ -91,37 +91,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section {
-  &--image-right {
-    max-height: 100%;
-    position: relative;
-    margin-bottom: 100px;
+.image-right {
+  max-height: 100%;
+  position: relative;
+  margin-bottom: 100px;
+
+  &__width-limit {
+    max-width: 1600px;
   }
-}
 
-.card {
-  &--right {
-    background-image: url("../../assets/governance_hero.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 100%;
+  &__card {
+    &--right {
+      background-image: url("../../assets/governance_hero.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 100%;
 
-    @include media-breakpoint-down(lg) {
-      display: none;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    &--left {
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
   }
-
-  &--left {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-
-.width-limit {
-  max-width: 1600px;
 }
 </style>
