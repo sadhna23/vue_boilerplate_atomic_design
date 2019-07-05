@@ -77,7 +77,6 @@ export default {
     float: left;
     cursor: pointer;
     padding: 12px 24px;
-    transition: background-color 0.2s;
     border: 1px solid $border;
     border-right: none;
     background-color: $bg--darkwhite;
