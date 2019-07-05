@@ -25,7 +25,7 @@
       </div>
     </section>
     <section>
-      <div class="container width-limit">
+      <div class="container image-right__width-limit">
         <CodeComponent :isJsAvailable="false">
           <template slot="html">
             <pre id="copy1">
