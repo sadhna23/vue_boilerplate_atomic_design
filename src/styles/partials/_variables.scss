@@ -1,10 +1,30 @@
 // Variables
 
 // Font families
-$segoe: 'Segoe UI Regular', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-$segoe--light: 'Segoe UI Light', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-$segoe--semi: 'Segoe UI Semibold', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-$segoe--bold: 'Segoe UI Bold', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+$segoe: 'Segoe UI Regular',
+-apple-system,
+BlinkMacSystemFont,
+'Roboto',
+'Helvetica Neue',
+sans-serif;
+$segoe--light: 'Segoe UI Light',
+-apple-system,
+BlinkMacSystemFont,
+'Roboto',
+'Helvetica Neue',
+sans-serif;
+$segoe--semi: 'Segoe UI Semibold',
+-apple-system,
+BlinkMacSystemFont,
+'Roboto',
+'Helvetica Neue',
+sans-serif;
+$segoe--bold: 'Segoe UI Bold',
+-apple-system,
+BlinkMacSystemFont,
+'Roboto',
+'Helvetica Neue',
+sans-serif;
 
 // MWF Font weights
 $bold: 700;
@@ -12,32 +32,35 @@ $semi-bold: 600;
 $normal: 400;
 
 // Colors (You will most likely have to edit these on a project to project basis)
-$text--white:       #ffffff;
-$text--default:     #3C3C41;
-$text--grey:        #737373;
-$text--blue:        #0078d4;
+$text--white: #ffffff;
+$text--default: #3C3C41;
+$text--grey: #737373;
+$text--blue: #0078d4;
 $text--greyheading: #707070;
-$text--lightgrey:   #6d6d6d;
-$text--black:         #000000;
+$text--lightgrey: #6d6d6d;
+$text--black: #000000;
 
-$bg--white:         #ffffff;
-$bg--black:         #000000;
-$bg--blue:          #0078d4;
-$bg--blue--2:       #0564ad;
-$bg--darkgrey:      #3c3c41;
-$bg--fadewhite:     #f8f8f8;
-$bg--lightgrey:     #ebebeb;
-$bg--shadow:        #888888;
-$bg--grey:        #737373;
+$bg--white: #ffffff;
+$bg--darkwhite: #f1f1f1;
+$bg--black: #000000;
+$bg--blue: #0078d4;
+$bg--blue--2: #0564ad;
+$bg--darkgrey: #3c3c41;
+$bg--fadewhite: #f8f8f8;
+$bg--lightgrey: #ebebeb;
+$bg--shadow: #888888;
+$bg--grey: #737373;
 
 $bg-shgrey: #dcdcdc;
 $bg-shgreylight:#d0d0d0;
+$border : #ccc;
 //Variable for box shadow
 $box--sh: 0px 1px 5px 0px rgba(0, 0, 0, 0.16);
 $nav--sh: 0px 4px 5px 0px rgba(0, 0, 0, 0.16);
 $circle--sh: 0 2px 5px rgba(0, 0, 0, 0.3);
 $image--sh: 0px 1px 10px -5px rgba(0, 0, 0, 0.7);
 $modal--bg: rgba(10, 10, 10, 0.2);
-$modal--sh:0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+$modal--sh:0 2px 3px rgba(10, 10, 10, 0.1),
+0 0 0 1px rgba(10, 10, 10, 0.1);
 $modal--sh1:rgba(10, 10, 10, 0.3);
 $modal--bg1:rgba(10, 10, 10, 0.86);
