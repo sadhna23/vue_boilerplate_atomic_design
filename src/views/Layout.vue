@@ -1,15 +1,16 @@
 <template>
   <div class="about">
-    <ImageAtLeft>
-      <slot></slot>
-    </ImageAtLeft>
+    <ImageAtRight />
+    <!-- <ImageAtLeft /> -->
   </div>
 </template>
 
 <script>
+import ImageAtRight from "@/components/organisms/ImageAtRight.vue";
 import ImageAtLeft from "@/components/organisms/ImageAtLeft.vue";
 export default {
   components: {
+    ImageAtRight,
     ImageAtLeft
   },
   props: {

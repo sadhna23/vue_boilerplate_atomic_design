@@ -1,6 +1,6 @@
 <template>
   <div class="container code-content">
-    <div class="tabs">
+    <div class="code-content__tabs">
       <a @click="activetab = 1" v-bind:class="[activetab === 1 ? 'active' : '']">HTML</a>
       <a @click="activetab = 2" v-bind:class="[activetab === 2 ? 'active' : '']">CSS</a>
       <a
@@ -65,12 +65,15 @@ export default {
 
 <style lang="scss" scoped>
 /* Style the tabs */
-.tabs {
-  overflow: hidden;
-  margin-left: 20px;
-  margin-bottom: -2px; // hide bottom border
 
-  & a {
+.code-content {
+  position: relative;
+  &__tabs {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-bottom: -2px; // hide bottom border
+  }
+  &__tabs a {
     float: left;
     cursor: pointer;
     padding: 12px 24px;
@@ -79,30 +82,23 @@ export default {
     border-right: none;
     background-color: $bg--darkwhite;
     border-radius: 10px 10px 0 0;
+
+    &:last-child {
+      border-right: 1px solid $border;
+    }
+
+    &:hover {
+      background-color: $bg--grey;
+      color: $text--white;
+    }
+
+    &.active {
+      background-color: $bg--white;
+      color: $text--default;
+      border-bottom: 2px solid $text--white;
+      cursor: default;
+    }
   }
-
-  & a:last-child {
-    border-right: 1px solid $border;
-  }
-
-  & a:hover {
-    background-color: $bg--grey;
-    color: $text--white;
-  }
-}
-
-/* Styling for active tab */
-.tabs a.active {
-  background-color: $bg--white;
-  color: $text--default;
-  border-bottom: 2px solid $text--white;
-  cursor: default;
-}
-
-/* Style the tab content */
-
-.code-content {
-  position: relative;
 
   &__tabcontent {
     padding: 30px;

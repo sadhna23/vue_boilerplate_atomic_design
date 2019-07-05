@@ -1,10 +1,11 @@
 <template>
   <div>
-    <section class="section section--image-right">
+    <section class="section section--image-left">
       <div class="container width-limit">
         <div class="row">
-          <div class="col-xl-6 col-xs-12 card card--left">
-            <h1>This is header</h1>
+          <div class="col-xl-6 col-xs-12 card card--left"></div>
+          <div class="col-xl-6 col-xs-12 card card--right">
+            <h1>This is header Image Left</h1>
             <p>
               The Microsoft 365 E-Discovery and Data Subject Requests capability
               allows healthcareHCOs organizations to quickly access information
@@ -20,7 +21,6 @@
               folders.
             </p>
           </div>
-          <div class="col-xl-6 col-xs-12 card card--right"></div>
         </div>
       </div>
     </section>
@@ -92,20 +92,21 @@ export default {
 
 <style lang="scss" scoped>
 .section {
-  &--image-right {
+  &--image-left {
     max-height: 100%;
     position: relative;
+    margin-bottom: 100px;
   }
 }
 
 .card {
-  &--right {
+  &--left {
     background-image: url("../../assets/governance_hero.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: absolute;
-    right: 0;
+    left: 0;
     height: 100%;
     width: 100%;
 
@@ -114,9 +115,10 @@ export default {
     }
   }
 
-  &--left {
+  &--right {
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-left: auto;
   }
 }
 
